@@ -54,7 +54,48 @@
         };
     };
 
-    keymap {
+        macros {
+        claude_chief: claude_chief {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            display-name = "Claude /chief";
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_tap &kp SLASH &kp C &kp H &kp I &kp E &kp F>
+                , <&macro_wait_time 300>
+                , <&macro_tap &kp ENTER>
+                ;
+        };
+
+        claude_rapportcheck: claude_rapportcheck {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            display-name = "Claude /rapportcheck";
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_tap &kp SLASH &kp R &kp A &kp P &kp P &kp O &kp R &kp T &kp C &kp H &kp E &kp C &kp K &kp SPACE>;
+        };
+
+        claude_brief: claude_brief {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            display-name = "Claude /brief";
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_tap &kp SLASH &kp B &kp R &kp I &kp E &kp F &kp SPACE>;
+        };
+
+        claude_research: claude_research {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            display-name = "Claude /research";
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&macro_tap &kp SLASH &kp R &kp E &kp S &kp E &kp A &kp R &kp C &kp H &kp SPACE>;
+        };
+    };
+keymap {
         compatible = "zmk,keymap";
 
         // ╔══════════╦══════════╦══════════╦══════════╗
